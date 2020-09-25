@@ -1,0 +1,82 @@
+""" Making Pseudocode real. Create the Pseudocode in Python.
+By the way this is NOT a nice way to name your definitions in Python, but it lets you get away with it.
+pass lets me not code up the function. It's like on a quiz show.
+"""
+
+def LEFT(string,length):
+    return string[0:length]
+
+def RIGHT(string,length):
+    return string[-1:length]
+
+def MID (string,start,end):
+    return string[start:end]
+
+def LENGTH (string):
+    return len(string)
+
+def LCASE (string):
+    return string.lower()
+
+def UCASE(string):
+    return string.upper()
+
+def TO_UPPER(string):
+    return string.upper()
+
+def TO_LOWER(string):
+    return string.lower()
+
+def NUM_TO_STRING(number):
+    return str(number)
+
+def STRING_TO_NUM(string):
+    return int(string)
+
+def INT(string):
+    return int(string)
+
+def ASC(string):
+    return ord(string)
+
+print("menu:")
+print(""
+      "1-LEFT "
+      "2-RIGHT "
+      "3-MID "
+      "4-LENGTH "
+      "5-LCASE "
+      "6-UCASE "
+      "7-NUM_TO_STRING "
+      "8-STRING_TO_NUM "
+      "9-INT "
+      "10-ASCII")
+
+my_string = input("Enter your string: ")
+choice  = int(input("Which option would you like to do?"))
+if choice == 1 or 2:
+    length = int(input("Length of the string to be inputted?"))
+elif choice == 3:
+    start = int(input("Position of the beginning of the new string"))
+    end = int(input("Position of the end of the new string"))
+
+if choice == 1:
+    print(LEFT(my_string, length))
+elif choice == 2:
+    print(RIGHT(my_string, length))
+elif choice == 3:
+    print(MID(my_string, start, end))
+elif choice == 4:
+    print(LENGTH(my_string))
+elif choice == 5:
+    print(LCASE(my_string))
+elif choice == 6:
+    print(UCASE(my_string))
+elif choice == 7:
+    print(NUM_TO_STRING(my_string))
+elif choice == 8:
+    print(STRING_TO_NUM(my_string))
+elif choice == 9:
+    print(NUM_TO_STRING(my_string))
+elif choice == 10:
+    print(ASC(my_string))
